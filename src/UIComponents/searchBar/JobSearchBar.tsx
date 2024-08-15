@@ -1,4 +1,4 @@
-// UIComponents/SearchInput.tsx
+'use client'
 import React from 'react';
 import ExperienceDropdown from '../dropDown/DropDown';
 import SvgSearch from '../SVG/SvgSearch';
@@ -16,7 +16,7 @@ interface SearchInputProps {
     location: string;
     setLocation: (location: string) => void;
     options: Option[];
-    handleSearch: () => void;
+    onSearch: (query: { skills: string; experience: string; location: string }) => void;
 }
 
 const SearchInput: React.FC<SearchInputProps> = ({
@@ -27,8 +27,11 @@ const SearchInput: React.FC<SearchInputProps> = ({
     location,
     setLocation,
     options,
-    handleSearch,
+    onSearch,
 }) => {
+    const handleSearch = () => {
+        onSearch({ skills: skills, experience: experience?.label, location: location });
+    }
     return (
         <div className="flex h-12 w-full items-center shadow-slate-300 box-border shadow-md justify-center border px-4 py-8 border-gray-300 rounded-3xl">
             <div className='flex w-full justify-start'>

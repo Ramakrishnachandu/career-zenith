@@ -10,10 +10,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      
+
       boxShadow: {
         "hover": "0 6px 12px #cbd5e1",
-        "active": "0 6px 12px #e2e8f0"
+        "active": "0 6px 12px #e2e8f0",
+        'card': " 0px 14px 40px var(--Ev400, rgba(30, 10, 58, 0.1));"
       }
     },
   },
