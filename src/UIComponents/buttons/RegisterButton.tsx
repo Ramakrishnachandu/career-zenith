@@ -3,22 +3,23 @@
 import React from 'react';
 
 interface PrimaryButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-    onClick: () => void;
+    onClick?: () => void;
     children: React.ReactNode;
 }
 
-const RegisterButton: React.FC<PrimaryButtonProps> = ({ onClick, children, className, ...props }) => {
+const PrimaryButton: React.FC<PrimaryButtonProps> = ({ onClick, children, className, disabled, ...props }) => {
     return (
         <button
-            type='button'
             onClick={onClick}
-            className={`bg-orange-500 text-white border border-orange-600 hover:bg-orange-400 h-10 font-semibold py-1 px-4 rounded-3xl  transition duration-200 
-         ${className}`} 
-            {...props} 
+            disabled={disabled}
+            className={`text-white h-10 font-semibold py-1 px-4 rounded-3xl transition duration-200 
+                ${disabled ? 'bg-gray-500 cursor-not-allowed opacity-50' : 'bg-blue-600 hover:bg-blue-700'}
+                ${className}`}
+            {...props}
         >
             {children}
         </button>
     );
 };
 
-export default RegisterButton;
+export default PrimaryButton;
