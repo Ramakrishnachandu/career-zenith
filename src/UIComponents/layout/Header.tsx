@@ -29,7 +29,6 @@ const Header = () => {
         <nav className="flex-grow md:flex md:justify-center">
           <ul className="flex gap-6 text-sm md:text-base">
             <li className="flex cursor-pointer border-b-2 p-1  border-transparent hover:border-blue-600">
-              {" "}
               <Link href="/jobsearch">{"Jobs"}</Link>
             </li>
             <li className="flex cursor-pointer border-b-2 p-1 border-transparent hover:border-blue-600">
@@ -49,9 +48,7 @@ const Header = () => {
         {/* Action Buttons */}
         <div className="flex gap-4 mt-4 md:mt-0">
           <PrimaryButton
-            onClick={() => {
-              /* Login Logic */
-            }}
+            onClick={() => router?.push("/login-page")}
           >
             Login
           </PrimaryButton>
@@ -62,11 +59,9 @@ const Header = () => {
             {"Register"}
           </RegisterButton>
           <PrimaryButton
-            onClick={() => {
-              /* Resume Builder Logic */
-            }}
+            onClick={() => router?.push("/resume-builder")}
           >
-            Resume Builder
+            {'Resume Builder'}
           </PrimaryButton>
         </div>
       </div>

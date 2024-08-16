@@ -186,7 +186,7 @@ const RegistrationPage = () => {
                         required
                     />
                     <InputField
-                        label="Enter your mobile Number"
+                        label="Enter your mobile number"
                         placeholder="Enter your mobile number"
                         maxLength={35}
                         type="tel"

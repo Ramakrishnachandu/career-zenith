@@ -7,7 +7,7 @@ interface PrimaryButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
     children: React.ReactNode;
 }
 
-const PrimaryButton: React.FC<PrimaryButtonProps> = ({ onClick, children, className, disabled, ...props }) => {
+const RegisterButton: React.FC<PrimaryButtonProps> = ({ onClick, children, className, disabled, ...props }) => {
     return (
         <button
             onClick={onClick}
@@ -22,4 +22,4 @@ const PrimaryButton: React.FC<PrimaryButtonProps> = ({ onClick, children, classN
     );
 };
 
-export default PrimaryButton;
+export default RegisterButton;
