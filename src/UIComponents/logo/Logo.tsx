@@ -12,20 +12,20 @@ const Logo: React.FC = () => {
                 <text
                     x="20"
                     y="70"
-                    font-family="Arial, sans-serif"
-                    font-size="56"
+                    fontFamily="Arial, sans-serif"
+                    fontSize="56"
                     fill="#1e3a8a"
-                    font-weight="bold"
+                    fontWeight="bold"
                 >
                     Career
                 </text>
                 <text
                     x="220"
                     y="70"
-                    font-family="Arial, sans-serif"
-                    font-size="56"
+                    fontFamily="Arial, sans-serif"
+                    fontSize="56"
                     fill="#4f46e5"
-                    font-weight="bold"
+                    fontWeight="bold"
                 >
                     Nexus
                 </text>
