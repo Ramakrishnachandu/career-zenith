@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
-import User from "../../model/login"; // Adjust the path to your User model
+import User from "../../model/user"; // Adjust the path to your User model
 
 export async function POST(req: NextRequest) {
   try {

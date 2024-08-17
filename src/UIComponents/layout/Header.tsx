@@ -19,7 +19,7 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-slate-50 w-full gap-2 sticky top-0 border-b z-999 shadow-sm shadow-slate-300 border-slate-300 py-4 px-6 md:px-8">
+    <header className="bg-slate-50 z-10 w-full gap-2 sticky top-0 border-b z-999 shadow-sm shadow-slate-300 border-slate-300 py-4 px-6 md:px-8">
       <div className="flex items-center justify-between flex-wrap">
         <Link href="/">
           <Logo />

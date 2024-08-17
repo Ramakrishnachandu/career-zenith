@@ -11,7 +11,7 @@ const SvgNotFound = () => {
             stroke="#2563eb"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
         >
             <path d="M2 3h20a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
             <path d="M12 9l4 4-4 4" />

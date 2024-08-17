@@ -2,7 +2,7 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import User from "../../model/user";
-import bcrypt from "bcryptjs";
+// import bcrypt from "bcryptjs";
 
 export async function POST(request: Request) {
   try {
@@ -19,14 +19,14 @@ export async function POST(request: Request) {
       );
     }
 
-    // Hash the password before saving
-    const hashedPassword = await bcrypt.hash(password, 10);
+    // // Hash the password before saving
+    // const hashedPassword = await bcrypt.hash(password, 10);
 
     // Create a new user with the hashed password
     const newUser = new User({
       name,
       email,
-      password: hashedPassword,
+      password,
       mobile,
       city,
       workStatus,
