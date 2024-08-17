@@ -9,8 +9,11 @@ import React, { useState } from "react";
 import { Errors, FormData } from "./utils/IPage";
 import { areAllErrorsEmpty } from "./utils/function";
 import { useRouter } from "next/navigation";
+import { useToastStore } from "@/store/useToastStore";
+import { title } from "process";
 
 const RegistrationPage = () => {
+  const showToast = useToastStore((state) => state.showToast);
   const [uploadedFile, setUploadedFile] = useState<File | null>(null);
   const router = useRouter(); // Initialize the router
   const [formData, setFormData] = useState<FormData>({
@@ -97,7 +100,11 @@ const RegistrationPage = () => {
       const result = await response.json();
       if (response.ok) {
         router.push("/login-page");
-        alert("Registration successful");
+        showToast({
+          type: "success",
+          title: "Registration successful",
+        });
+
         // Optionally reset form or navigate
       } else {
         alert(result.message || "Something went wrong");

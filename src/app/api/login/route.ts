@@ -16,13 +16,13 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Find user by email
-    const user = await User.findOne({ email });
+    // Find user by email and explicitly select the password field
+    const user = await User.findOne({ email }).select("+password");
     if (!user) {
       return NextResponse.json({ message: "User not found" }, { status: 404 });
     }
 
-    // Validate password (assuming password is stored hashed)
+    // Validate password
     const isMatch = await user.comparePassword(password);
     if (!isMatch) {
       return NextResponse.json(
@@ -30,10 +30,17 @@ export async function POST(req: NextRequest) {
         { status: 401 }
       );
     }
+    // Exclude the password field from the response
+    const { password: _, ...userWithoutPassword } = user.toObject();
 
-    // Send user details excluding password
-    const { password: _, ...userData } = user.toObject();
-    return NextResponse.json(userData, { status: 200 });
+    return NextResponse.json(
+      {
+        message: 'Login successful',
+        userInfo: { ...userWithoutPassword, userLogged: true},
+        success: true,
+      },
+      { status: 200 }
+    );
   } catch (error) {
     console.error("Login error:", error);
     return NextResponse.json(

@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import './not-found';
 import Header from "@/UIComponents/layout/Header";
+import ToastContainer from "@/UIComponents/toast/ToastWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -46,6 +47,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <div>
           <Header />
+          <ToastContainer />
           {children}
         </div>
       </body>

@@ -7,8 +7,12 @@ import Link from "next/link";
 import { useRouter } from "next/navigation"; // Import useRouter for navigation
 import React, { useState } from "react";
 import { FormData, Errors } from "./utils/IPage";
+import { useToastStore } from "@/store/useToastStore";
+import useUserStore from "@/store/userStore/useUserStore";
 
 const LoginPage = () => {
+  const showToast = useToastStore((state) => state.showToast);
+  const { setUserInfo } = useUserStore()
   const [formData, setFormData] = useState<FormData>({
     email: "",
     password: "",
@@ -38,8 +42,15 @@ const LoginPage = () => {
 
       const data = await response.json();
 
+      console.log('Data', data)
       if (response.ok) {
         router.push("/");
+        setUserInfo(data?.userInfo)
+        showToast({
+          type: "success",
+          title: `Welcome ${data?.userInfo?.name}..!`,
+          message: 'Login Successfully'
+        });
       } else {
         // If there's an error, set the error message
         if (data?.message?.includes("Invalid password"))
@@ -80,7 +91,10 @@ const LoginPage = () => {
             </ul>
           </div>
           <div className="flex mt-5">
-            <RegisterButton onClick={() => router.push("/registration")} className="bg-orange-500 hover:bg-orange-400">
+            <RegisterButton
+              onClick={() => router.push("/registration")}
+              className="bg-orange-500 hover:bg-orange-400"
+            >
               {"Register for free"}
             </RegisterButton>
           </div>
