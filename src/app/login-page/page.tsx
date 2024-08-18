@@ -72,7 +72,7 @@ const LoginPage = () => {
       <div className="flex  w-[70%]">
         <div className="flex flex-col gap-3 w-[70%] mr-[-1rem] bg-white mt-[2rem] border rounded-2xl pr-12 pl-8 py-4 pt-8 border-slate-300 shadow-lg shadow-blue-300">
           <div className="flex text-slate-800 text-lg font-bold">
-            {"New to Career Nexus?"}
+            {"New to Career Zenith?"}
           </div>
           <div>
             <ul className="list-disc list-inside pl-5 flex flex-col gap-3">

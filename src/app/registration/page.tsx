@@ -154,7 +154,7 @@ const RegistrationPage = () => {
       <div className="flex flex-col max-w-[55%] border bg-white shadow-lg shadow-blue-200 border-slate-300 gap-6 px-8 py-6 rounded-lg">
         <div className="flex flex-col gap-1">
           <p className="text-slate-800 font-semibold text-xl">
-            {" Create your Nexus Profile"}
+            {" Create your Zenith Profile"}
           </p>
           <p className="text-gray-500 font-normal text-sm">
             {` Unlock Your Dream Job with India’s Premier Job Site`}
@@ -273,7 +273,7 @@ const RegistrationPage = () => {
             {" By clicking Register, you agree to the"}
             <span className="text-blue-600">{"Terms and Conditions"}</span> &
             <span className="text-blue-600">{" Privacy Policy"}</span> of
-            {"Career-Nexus.vercel.app"}
+            {"career-zenith.vercel.app"}
           </p>
           <div className="flex justify-center">
             <RegisterButton

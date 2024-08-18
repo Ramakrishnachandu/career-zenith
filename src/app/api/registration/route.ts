@@ -2,6 +2,8 @@
 import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import User from "../../model/user";
+import sendWelcomeEmailToUser from "@/utils/SendWelcomeMail";
+import { use } from "react";
 // import bcrypt from "bcryptjs";
 
 export async function POST(request: Request) {
@@ -21,7 +23,11 @@ export async function POST(request: Request) {
 
     // // Hash the password before saving
     // const hashedPassword = await bcrypt.hash(password, 10);
-
+    // Check if the user already exists
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return NextResponse.json({ error: 'User already exists' }, { status: 400 });
+    }
     // Create a new user with the hashed password
     const newUser = new User({
       name,
@@ -32,6 +38,11 @@ export async function POST(request: Request) {
       workStatus,
     });
     await newUser.save();
+    // Send a welcome email
+    await sendWelcomeEmailToUser({
+      email: 'ramakrishnachandu43@gmail.com',
+      name: name
+    })
 
     return NextResponse.json(
       { message: "User created successfully", user: newUser, success: true },

@@ -33,7 +33,7 @@ const SvgRegister = () => {
         text-anchor="middle"
         fontWeight="bold"
       >
-        Nexus
+        Zenith
       </text>
       <path
         fill="#ffffff"

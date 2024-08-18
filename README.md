@@ -1,10 +1,10 @@
-## Project Name: CareerNexus
+## Project Name: CareerZenith
 
-![CareerNexus Logo](path/to/logo.png) <!-- Replace with your project's logo -->
+![CareerZenith Logo](path/to/logo.png) <!-- Replace with your project's logo -->
 
 ## 🌟 Introduction
 
-Welcome to CareerNexus —your go-to job portal designed to bridge the gap between job seekers and employers. Whether you’re looking for your dream job or seeking top talent, CareerNexus has got you covered. With a sleek, user-friendly interface, finding and applying for jobs has never been easier!
+Welcome to CareerZenith —your go-to job portal designed to bridge the gap between job seekers and employers. Whether you’re looking for your dream job or seeking top talent, CareerZenith has got you covered. With a sleek, user-friendly interface, finding and applying for jobs has never been easier!
 
 ## 📋 Features
 
@@ -17,7 +17,7 @@ Welcome to CareerNexus —your go-to job portal designed to bridge the gap betwe
 
 ## 🛠️ Tech Stack
 
-CareerNexus is built with cutting-edge technologies to ensure a smooth user experience:
+CareerZenith is built with cutting-edge technologies to ensure a smooth user experience:
 
 - **Frontend**:
 
@@ -37,13 +37,13 @@ CareerNexus is built with cutting-edge technologies to ensure a smooth user expe
 
 ## 🚀 Getting Started
 
-To set up CareerNexus on your local machine, follow these steps:
+To set up CareerZenith on your local machine, follow these steps:
 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/careernexus.git
-   cd careernexus
+   git clone https://github.com/yourusername/careerZenith.git
+   cd careerZenith
    ```
 
 2. **Install dependencies**:

@@ -9,30 +9,30 @@ import ToastContainer from "@/UIComponents/toast/ToastWrapper";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Career Nexus - Your Gateway to Job Opportunities",
-  description: "Career Nexus is designed to help job seekers find their ideal roles and allow employers to post job openings seamlessly.",
+  title: "Career Zenith - Your Gateway to Job Opportunities",
+  description: "Career Zenith is designed to help job seekers find their ideal roles and allow employers to post job openings seamlessly.",
   authors: [{ name: 'Veera Ramakrishna Chandu' }],
-  applicationName: 'Career Nexus',
+  applicationName: 'Career Zenith',
   keywords: 'job portal, job search, career opportunities, employment services, job listings, job vacancies, recruitment platform',
   openGraph: {
-    title: "Career Nexus - Your Gateway to Job Opportunities",
-    description: "Discover job opportunities and connect with employers on Career Nexus.",
-    url: "https://career-nexus.vercel.app",
-    siteName: "Career Nexus",
+    title: "Career Zenith - Your Gateway to Job Opportunities",
+    description: "Discover job opportunities and connect with employers on Career Zenith.",
+    url: "https://career-zenith.vercel.app",
+    siteName: "Career Zenith",
     images: [
       {
-        url: "/path-to-your-image.jpg", // Replace with your image path
+        url: "/logo.svg",
         width: 800,
         height: 600,
-        alt: "Career Nexus Logo",
+        alt: "Career Zenith Logo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Career Nexus - Your Gateway to Job Opportunities",
-    description: "Discover job opportunities and connect with employers on Career Nexus.",
-    images: "/path-to-your-image.jpg", // Replace with your image path
+    title: "Career Zenith - Your Gateway to Job Opportunities",
+    description: "Discover job opportunities and connect with employers on Career Zenith.",
+    images: "/logo.svg",
   },
 };
 

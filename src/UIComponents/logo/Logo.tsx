@@ -27,22 +27,8 @@ const Logo: React.FC = () => {
                     fill="#4f46e5"
                     fontWeight="bold"
                 >
-                    Nexus
+                    Zenith
                 </text>
-                <path
-                    d="M140 50 C140 40, 150 40, 150 50 C150 60, 140 60, 140 50 Z"
-                    fill="#4f46e5"
-                />
-                <path
-                    d="M180 50 L190 50 L185 45 Z"
-                    fill="white"
-                />
-                <path
-                    d="M185 50 Q195 45, 205 50 Q195 55, 185 50 Z"
-                    fill="#4f46e5"
-                />
-                <circle cx="360" cy="50" r="12" fill="#4f46e5" />
-                <circle cx="360" cy="50" r="6" fill="white" />
             </svg>
 
         </div>

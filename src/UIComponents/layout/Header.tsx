@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useToastStore } from "@/store/useToastStore";
 import useUserStore from "@/store/userStore/useUserStore";
+import sendWelcomeEmailToUser from "@/utils/SendWelcomeMail";
 const Header = () => {
   const showToast = useToastStore((state) => state.showToast);
   const router = useRouter();
@@ -67,12 +68,13 @@ const Header = () => {
               </RegisterButton>
               <PrimaryButton
                 onClick={() => router?.push("/resume-builder")}
-              // onClick={() =>
-              //   showToast({
-              //     type: "success",
-              //     title: "Registration successful",
-              //   })
-              // }
+                // onClick={() => {
+                //   showToast({
+                //     type: "success",
+                //     title: "Registration successful",
+                //   })
+                // }
+                // }
               >
                 {"Resume Builder"}
               </PrimaryButton>

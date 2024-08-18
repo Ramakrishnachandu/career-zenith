@@ -6,7 +6,6 @@ import JobPage from "@/UIPages/JobPage";
 import { generateYearsArray } from "@/functions/generateYears";
 import JobsCategoriesCard from "@/UIComponents/cards/JobsCategoriesCard";
 import SvgRemoteTheme from "@/UIComponents/SVG/SvgRemoteTheme";
-import useUserStore  from "@/store/userStore/useUserStore";
 
 interface Option {
   value: string;
@@ -29,9 +28,6 @@ export default function Home() {
     // setIsModalOpen(false);
   };
 
-  const { userInfo } = useUserStore()
-  console.log('user Info', userInfo)
-
   const options = generateYearsArray();
 
   return (
@@ -42,7 +38,7 @@ export default function Home() {
             {"Find your dream job now"}
           </p>
           <p className="flex text-lg font-semibold text-slate-900">
-           {'5 lakh+ jobs for you to explore'}
+            {'5 lakh+ jobs for you to explore'}
           </p>
         </div>
         <div>
