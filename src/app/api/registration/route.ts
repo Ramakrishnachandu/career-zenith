@@ -40,7 +40,7 @@ export async function POST(request: Request) {
     await newUser.save();
     // Send a welcome email
     await sendWelcomeEmailToUser({
-      email: 'ramakrishnachandu43@gmail.com',
+      email: email,
       name: name
     })
 
