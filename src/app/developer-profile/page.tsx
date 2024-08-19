@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 
 const DeveloperProfile = () => {
+    
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-orange-100 pt-24 py-10 md:pt-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white shadow-card shadow-blue-200 md:shadow-blue-400 rounded-2xl overflow-visible md:overflow-hidden">
@@ -12,7 +13,7 @@ const DeveloperProfile = () => {
             <div
               className="w-36 h-36 rounded-full border border-slate-300 bg-cover bg-center"
               style={{
-                backgroundImage: "url('/rk-image.jpg')",
+                backgroundImage: "url('/images/rk-image.jpg')",
                 backgroundSize: "cover", // Ensure the image covers the container
                 backgroundPosition: "center", // Center the image
               }}
@@ -22,7 +23,7 @@ const DeveloperProfile = () => {
           {/* Image for larger screens */}
           <div
             className="hidden md:block md:w-[40%] bg-cover bg-center"
-            style={{ backgroundImage: "url('/rk-image.jpg')" }}
+            style={{ backgroundImage: "url('/images/rk-image.jpg')" }}
           />
 
           <div className="p-8 gap-2 md:w-2/3">
