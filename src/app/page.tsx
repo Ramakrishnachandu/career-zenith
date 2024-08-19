@@ -62,11 +62,11 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="flex border  rounded-md justify-center flex-col gap-8 items-center w-full p-4">
+      <div className="flex rounded-md justify-center flex-col gap-8 items-center w-full p-4">
         <div className="flex gap-2 p-2 bg-white rounded-md">
           <JobPage />
         </div>
-        <div className="flex gap-2  bg-white rounded-md">
+        <div className="flex gap-2">
           <CompanyInfoPage />
         </div>
       </div>
