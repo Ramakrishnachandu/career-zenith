@@ -27,7 +27,7 @@ const Page = () => {
         <div
           className={`md:flex ${
             isFilterVisible
-              ? "block  fixed top-2 bg-white overflow-scroll left-0 h-full  p-0 w-64 z-[99] transform transition-transform duration-300"
+              ? "block  fixed top-0 bg-white rounded-xl overflow-scroll left-0 h-full  p-0 w-80 z-[99] transform transition-transform duration-300"
               : "hidden"
           } md:block flex-col min-w-[17.375rem] gap-4 border rounded-md box-border md:px-8 md:py-4 text-slate-800 shadow-active shadow-blue-300 bg-white border-slate-300`}
         >
@@ -186,13 +186,13 @@ const Page = () => {
                 <a
                   className="title text-lg font-semibold text-blue-600 hover:underline"
                   title="React Native- react js Developer"
-                  href="https://www.naukri.com/job-listings-react-native-react-js-developer-2coms-bengaluru-4-to-9-years-020824010130"
+                  href="https://career-zenith.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   React Native - React JS Developer
                 </a>
-                <span className="comp-dtls-wrap flex items-center">
+                <span className="gap-2 flex items-center">
                   <a
                     className="comp-name text-sm text-gray-700 hover:underline mr-4"
                     title="2coms"
@@ -203,17 +203,17 @@ const Page = () => {
                   </a>
                   <a
                     className="rating flex items-center text-gray-500 hover:underline"
-                    href="https://www.ambitionbox.com/reviews/2coms-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri"
+                    href="https://career-zenith.vercel.app"
                     target="_blank"
                     title="Powered by Ambition Box"
                   >
                     <span className="ni-job-tuple-icon ni-job-tuple-icon-ot_star star"></span>
-                    <span className="main-2">4.0</span>
+                    <span className="text-base text-gray-500">4.0</span>
                     <span className="ni-job-tuple-icon ni-job-tuple-icon-ot_star"></span>
                   </a>
                   <a
-                    className="review ver-line text-gray-500 hover:underline"
-                    href="https://www.ambitionbox.com/reviews/2coms-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri"
+                    className="text-base text-gray-500 hover:underline"
+                    href="https://career-zenith.vercel.app"
                     target="_blank"
                     title="Powered by Ambition Box"
                   >
@@ -231,10 +231,10 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="flex">
+            <div className="flex gap-2 text-base text-gray-800">
               <span className="flex items-center">
-                <span className="ni-job-tuple-icon ni-job-tuple-icon-srp-experience exp">
-                  <span title="4-9 Yrs" className="">
+                <span>
+                  <span title="4-9 Yrs" className="text-base text-gray-800">
                     4-9 Yrs
                   </span>
                 </span>
@@ -253,13 +253,13 @@ const Page = () => {
               </span>
             </div>
             <div className="row4 mb-2">
-              <span className="job-desc ni-job-tuple-icon ni-job-tuple-icon-srp-description text-gray-600">
+              <span className="text-base  text-gray-800">
                 3: Ability to operate independently and make decisions with
                 little direct supervision...
               </span>
             </div>
             <div className="row5 mb-2">
-              <ul className="tags-gt flex flex-wrap">
+              <ul className="text-base text-gray-800 flex flex-wrap">
                 <li className="bg-gray-200 rounded-full px-2 py-1 mr-2 mb-2">
                   redux
                 </li>
@@ -286,27 +286,27 @@ const Page = () => {
                 </li>
               </ul>
             </div>
-            <div className="row6 flex justify-between items-center text-gray-500">
+            <div className="text-base text-gray-400 flex justify-between items-center">
               <span className="job-post-day">2 Days Ago</span>
-              <span className="ni-job-tuple-icon ni-job-tuple-icon-srpSaveUnfilled un-saved save-job-tag cursor-pointer hover:text-blue-600">
+              <span className="text-lg text-gray-600 cursor-pointer hover:text-blue-600">
                 save
               </span>
             </div>
           </div>
           {/* Job Cards Container end */}
           <div className="p-4 flex flex-col hover:shadow-hover shadow-active gap-2 bg-white rounded-2xl">
-            <div className="flex justify-between  items-center ">
-              <div className="flex flex-col">
+            <div className="flex justify-between items-center ">
+              <div className="flex  flex-col">
                 <a
                   className="title text-lg font-semibold text-blue-600 hover:underline"
                   title="React Native- react js Developer"
-                  href="https://www.naukri.com/job-listings-react-native-react-js-developer-2coms-bengaluru-4-to-9-years-020824010130"
+                  href="https://career-zenith.vercel.app"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   React Native - React JS Developer
                 </a>
-                <span className="comp-dtls-wrap flex items-center">
+                <span className="gap-2 flex items-center">
                   <a
                     className="comp-name text-sm text-gray-700 hover:underline mr-4"
                     title="2coms"
@@ -317,17 +317,17 @@ const Page = () => {
                   </a>
                   <a
                     className="rating flex items-center text-gray-500 hover:underline"
-                    href="https://www.ambitionbox.com/reviews/2coms-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri"
+                    href="https://career-zenith.vercel.app"
                     target="_blank"
                     title="Powered by Ambition Box"
                   >
                     <span className="ni-job-tuple-icon ni-job-tuple-icon-ot_star star"></span>
-                    <span className="main-2">4.0</span>
+                    <span className="text-base text-gray-500">4.0</span>
                     <span className="ni-job-tuple-icon ni-job-tuple-icon-ot_star"></span>
                   </a>
                   <a
-                    className="review ver-line text-gray-500 hover:underline"
-                    href="https://www.ambitionbox.com/reviews/2coms-reviews?utm_campaign=srp_ratings&utm_medium=desktop&utm_source=naukri"
+                    className="text-base text-gray-500 hover:underline"
+                    href="https://career-zenith.vercel.app"
                     target="_blank"
                     title="Powered by Ambition Box"
                   >
@@ -345,10 +345,10 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="flex">
+            <div className="flex gap-2 text-base text-gray-800">
               <span className="flex items-center">
-                <span className="ni-job-tuple-icon ni-job-tuple-icon-srp-experience exp">
-                  <span title="4-9 Yrs" className="">
+                <span>
+                  <span title="4-9 Yrs" className="text-base text-gray-800">
                     4-9 Yrs
                   </span>
                 </span>
@@ -367,13 +367,13 @@ const Page = () => {
               </span>
             </div>
             <div className="row4 mb-2">
-              <span className="job-desc ni-job-tuple-icon ni-job-tuple-icon-srp-description text-gray-600">
+              <span className="text-base  text-gray-800">
                 3: Ability to operate independently and make decisions with
                 little direct supervision...
               </span>
             </div>
             <div className="row5 mb-2">
-              <ul className="tags-gt flex flex-wrap">
+              <ul className="text-base text-gray-800 flex flex-wrap">
                 <li className="bg-gray-200 rounded-full px-2 py-1 mr-2 mb-2">
                   redux
                 </li>
@@ -400,9 +400,9 @@ const Page = () => {
                 </li>
               </ul>
             </div>
-            <div className="row6 flex justify-between items-center text-gray-500">
+            <div className="text-base text-gray-400 flex justify-between items-center">
               <span className="job-post-day">2 Days Ago</span>
-              <span className="ni-job-tuple-icon ni-job-tuple-icon-srpSaveUnfilled un-saved save-job-tag cursor-pointer hover:text-blue-600">
+              <span className="text-lg text-gray-600 cursor-pointer hover:text-blue-600">
                 save
               </span>
             </div>

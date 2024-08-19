@@ -10,12 +10,12 @@ import useUserStore from "@/store/userStore/useUserStore";
 import LogoSmall from "../logo/LogoSmall";
 import SvgCancel from "../SVG/SvgCancel";
 import SvgMenu from "../SVG/SvgMenu";
+import { extractNameLetters } from "@/functions/extractName";
 
 const Header = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const router = useRouter();
   const pathName = usePathname();
-
   const handleSearch = (query: {
     skills: string;
     experience: string;
@@ -25,7 +25,7 @@ const Header = () => {
     // Implement your search logic here
   };
 
-  const { userInfo } = useUserStore();
+  const { userInfo, logout } = useUserStore();
 
   const toggleSidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
@@ -34,6 +34,7 @@ const Header = () => {
   const isActive = (path: string) =>
     pathName === path ? "text-blue-600" : "text-slate-900 hover:text-blue-500";
 
+  const NameLetters = extractNameLetters?.(userInfo?.name);
   return (
     <header className="bg-slate-50 z-10 w-full gap-2 sticky top-0 border-b z-999 shadow-sm shadow-slate-300 border-slate-300 py-4 px-6 md:px-8">
       <div className="flex items-center gap-4 justify-between flex-wrap">
@@ -72,11 +73,28 @@ const Header = () => {
 
         <div className="hidden md:flex gap-4 mt-4 md:mt-0">
           {userInfo?.userLogged ? (
-            <div className="flex bg-orange-500 text-white border rounded-xl items-center px-3 py-1 border-orange-600">
-              <p className="txt-base font-semibold" title={userInfo?.name}>
-                {userInfo?.name}
-              </p>
-            </div>
+            <>
+              <div className="flex border gap-2 px-[0.375rem] py-1 justify-between items-center  border-blue-800 bg-blue-700 rounded-3xl">
+                <p
+                  title={userInfo?.name}
+                  className="font-semibold text-base text-white truncate"
+                >
+                  {userInfo?.name || 'No user'}
+                </p>
+                <div className="flex bg-orange-600 border text-base text-white font-semibold rounded-full p-[5px]">
+                  {NameLetters || 'NU'}
+                </div>
+              </div>
+              <PrimaryButton
+                onClick={() => {
+                  logout()
+                  router?.push("/");
+                }}
+              >
+                {"Log out"}
+              </PrimaryButton>
+            </>
+
           ) : (
             <>
               <PrimaryButton onClick={() => router?.push("/login-page")}>
@@ -102,7 +120,7 @@ const Header = () => {
       {/* Sidebar */}
       <div
         className={`fixed top-0 left-0 h-full w-64 bg-slate-50 rounded-lg  z-50 transform transition-transform duration-300 ${
-          isSidebarOpen ? "translate-x-0 shadow-blue-400 shadow-lg" : "-translate-x-full"
+          isSidebarOpen ? "translate-x-0 shadow-blue-300 shadow-lg" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-start  flex-col gap-4 px-4 py-3">
@@ -115,10 +133,16 @@ const Header = () => {
             </button>
           </div>
           {userInfo?.userLogged && (
-            <div className="flex border border-orange-600 bg-orange-400 px-2 py-1 rounded-lg">
-              <p className="font-semibold text-base text-slate-800">
-                {userInfo?.name}
+            <div className="flex border gap-2 px-[0.375rem] py-1 justify-between items-center  border-blue-800 bg-blue-700 rounded-3xl">
+              <p
+                title={userInfo?.name}
+                className="font-semibold text-base text-white truncate"
+              >
+                {userInfo?.name || 'No User'}
               </p>
+              <div className="flex bg-orange-600 border text-base text-white font-semibold rounded-full p-[5px]">
+                {NameLetters || 'NU'}
+              </div>
             </div>
           )}
 
@@ -157,6 +181,7 @@ const Header = () => {
               <PrimaryButton
                 onClick={() => {
                   toggleSidebar();
+                  logout()
                   router?.push("/");
                 }}
               >

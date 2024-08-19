@@ -17,12 +17,19 @@ interface UserState {
 
 const useUserStore = create<UserState>((set) => ({
   userInfo: null,
-  userLogged: null,
   setUserInfo: (userInfo: User) => set(() => ({
     userInfo: userInfo,
   })),
   logout: () => set(() => ({
-    userInfo: null,
+    userInfo: {
+      name: '',
+      email: '',
+      mobile: '',
+      city: '',
+      workStatus: '',
+      userLogged: false,
+    },
   })),
 }));
-export default useUserStore
+
+export default useUserStore;
