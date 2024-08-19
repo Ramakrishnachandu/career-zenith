@@ -115,7 +115,7 @@ const Header = () => {
             </button>
           </div>
           {userInfo?.userLogged && (
-            <div className="flex border border-orange-600 bg-orange-400 rounded-lg">
+            <div className="flex border border-orange-600 bg-orange-400 px-2 py-1 rounded-lg">
               <p className="font-semibold text-base text-slate-800">
                 {userInfo?.name}
               </p>
