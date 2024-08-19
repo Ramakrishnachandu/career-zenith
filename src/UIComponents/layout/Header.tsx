@@ -31,7 +31,6 @@ const Header = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
-  console.log("pathname", pathName);
   const isActive = (path: string) =>
     pathName === path ? "text-blue-600" : "text-slate-900 hover:text-blue-500";
 
@@ -102,8 +101,8 @@ const Header = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-50 rounded-lg shadow-lg shadow-blue-400 z-50 transform transition-transform duration-300 ${
-          isSidebarOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-full w-64 bg-slate-50 rounded-lg  z-50 transform transition-transform duration-300 ${
+          isSidebarOpen ? "translate-x-0 shadow-blue-400 shadow-lg" : "-translate-x-full"
         }`}
       >
         <div className="flex justify-start  flex-col gap-4 px-4 py-3">
@@ -135,14 +134,14 @@ const Header = () => {
             </li>
             <li className={`flex cursor-pointer  border-transparent`}>
               <Link
-                className={` ${isActive("/skillTests")}`}
+                className={`${isActive("/skillTests")}`}
                 href="/skillTests"
                 onClick={toggleSidebar}
               >
                 {"Skill Tests"}
               </Link>
             </li>
-            <li className={`flex cursor-pointer   border-transparent `}>
+            <li className={`flex cursor-pointer  border-transparent `}>
               <Link
                 className={` ${isActive("/services")}`}
                 href="/services"

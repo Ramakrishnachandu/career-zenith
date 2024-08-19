@@ -36,7 +36,7 @@ const JobDescription: React.FC<JobDescriptionProps> = ({
   keySkills,
 }) => {
   return (
-    <section className="p-6 bg-white shadow-md rounded-lg">
+    <section className="p-4">
       <div className="mb-4">
         <h2 className="text-xl font-bold">{title}</h2>
       </div>
