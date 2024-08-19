@@ -1,11 +1,11 @@
 'use client'
-const Logo: React.FC = () => {
+const LogoSmall: React.FC = () => {
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 400 100"
-            width="200"
-            height="50"
+            viewBox="0 0 400 70"
+            width="120"
+            height="60"
         >
             <rect width="400" height="100" fill="#f0f4ff" rx="20" />
             <text
@@ -33,4 +33,4 @@ const Logo: React.FC = () => {
 };
 
 
-export default Logo
+export default LogoSmall
