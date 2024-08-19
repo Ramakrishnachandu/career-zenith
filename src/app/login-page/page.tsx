@@ -12,7 +12,7 @@ import useUserStore from "@/store/userStore/useUserStore";
 
 const LoginPage = () => {
   const showToast = useToastStore((state) => state.showToast);
-  const { setUserInfo } = useUserStore()
+  const { setUserInfo } = useUserStore();
   const [formData, setFormData] = useState<FormData>({
     email: "",
     password: "",
@@ -42,14 +42,14 @@ const LoginPage = () => {
 
       const data = await response.json();
 
-      console.log('Data', data)
+      console.log("Data", data);
       if (response.ok) {
         router.push("/");
-        setUserInfo(data?.userInfo)
+        setUserInfo(data?.userInfo);
         showToast({
           type: "success",
           title: `Welcome ${data?.userInfo?.name}..!`,
-          message: 'Login Successfully'
+          message: "Login Successfully",
         });
       } else {
         // If there's an error, set the error message
@@ -68,9 +68,9 @@ const LoginPage = () => {
   console.log("Login error:", error);
 
   return (
-    <div className="flex justify-center px-8 py-5">
-      <div className="flex  w-[70%]">
-        <div className="flex flex-col gap-3 w-[70%] mr-[-1rem] bg-white mt-[2rem] border rounded-2xl pr-12 pl-8 py-4 pt-8 border-slate-300 shadow-lg shadow-blue-300">
+    <div className="flex justify-center px-4 py-5  md:px-8 md:py-5">
+      <div className="flex flex-col-reverse md:flex-row md:gap-0  gap-8 md:w-[75%]">
+        <div className="flex flex-col gap-3 max-w-full md:w-[72%] md:mr-[-1rem] bg-white md:mt-[2rem] border rounded-2xl md:pr-12 pr-5 pl-8 py-4 pt-8 border-slate-300 shadow-lg shadow-blue-300">
           <div className="flex text-slate-800 text-lg font-bold">
             {"New to Career Zenith?"}
           </div>
@@ -102,7 +102,7 @@ const LoginPage = () => {
             <SvgOnlineRegister />
           </div>
         </div>
-        <div className="flex flex-col border w-[35%] border-slate-300  shadow-lg shadow-blue-300 gap-4 rounded-xl px-8 py-4 bg-white ">
+        <div className="flex flex-col border max-w-full md:w-[38%] border-slate-300  shadow-lg shadow-blue-300 gap-4 rounded-xl px-8 py-4 bg-white ">
           <div className="flex font-bold text-slate-800 text-xl">
             {"Login page"}
           </div>
@@ -151,8 +151,8 @@ const LoginPage = () => {
               </p>
               <div className="flex w-full h-[0.025rem] bg-slate-300 rounded-xl"></div>
             </div>
-            <div>
-              <div className="flex rounded-3xl items-center justify-between border cursor-pointer py-3 px-6 border-slate-300 shadow-md ">
+            <div className="flex justify-center">
+              <div className="flex rounded-3xl items-center w-fit justify-start gap-8 md:justify-between md:gap-2 border cursor-pointer py-3 px-6 border-slate-300 shadow-md ">
                 <div>
                   <SvgGoogle />
                 </div>

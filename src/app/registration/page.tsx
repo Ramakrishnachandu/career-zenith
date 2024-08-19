@@ -128,8 +128,8 @@ const RegistrationPage = () => {
     (value) => value.trim() !== ""
   );
   return (
-    <div className="flex gap-8 px-14 py-12 items-start justify-center">
-      <div className="flex flex-col border border-slate-300 gap-4 pt-4 pb-8 px-8 rounded-2xl bg-white shadow-md shadow-blue-300">
+    <div className="flex md:flex-row flex-col-reverse gap-8 px-4 md:px-14 py-12 items-start justify-center">
+      <div className="flex flex-col border border-slate-300 gap-4 pt-4 pb-8 px-4 md:px-8 rounded-2xl bg-white shadow-md shadow-blue-300">
         <div className="flex justify-center">
           <SvgRegister />
         </div>
@@ -151,7 +151,7 @@ const RegistrationPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col max-w-[55%] border bg-white shadow-lg shadow-blue-200 border-slate-300 gap-6 px-8 py-6 rounded-lg">
+      <div className="flex flex-col max-w-full md:max-w-[55%] border bg-white shadow-lg shadow-blue-200 border-slate-300 gap-6 px-4 md:px-8 py-6 rounded-lg">
         <div className="flex flex-col gap-1">
           <p className="text-slate-800 font-semibold text-xl">
             {" Create your Zenith Profile"}
@@ -220,11 +220,11 @@ const RegistrationPage = () => {
               <span>{"Work Status"}</span>
               <span className="text-red-500">*</span>
             </div>
-            <div className="flex w-full flex-wrap gap-4">
+            <div className="flex w-full flex-wrap gap-6 md:gap-4">
               {["experienced", "fresher"].map((status) => (
                 <label
                   key={status}
-                  className={`flex flex-col min-w-[13.75rem] w-[45%] rounded-xl cursor-pointer border gap-2 py-2 px-4 shadow-lg
+                  className={`flex flex-col min-w-[13.75rem] w-full md:w-[45%] rounded-xl cursor-pointer border gap-2 md:py-2 md:px-4  p-6 shadow-lg
                     ${
                       formData.workStatus === status
                         ? "border-blue-600 bg-blue-50 shadow-blue-300"
@@ -270,10 +270,10 @@ const RegistrationPage = () => {
             />
           </div>
           <p className="mt-4 text-xs font-normal text-slate-500">
-            {" By clicking Register, you agree to the"}
+            {" By clicking Register, you agree to the "}
             <span className="text-blue-600">{"Terms and Conditions"}</span> &
             <span className="text-blue-600">{" Privacy Policy"}</span> of
-            {"career-zenith.vercel.app"}
+            {" career-zenith.vercel.app"}
           </p>
           <div className="flex justify-center">
             <RegisterButton
