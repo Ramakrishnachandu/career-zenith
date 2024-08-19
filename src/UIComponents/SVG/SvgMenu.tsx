@@ -11,18 +11,18 @@ const SvgMenu = () => {
     >
       <g
         fill="#2563EB"
-        fill-rule="nonzero"
+        fillRule="nonzero"
         stroke="none"
-        stroke-width="1"
-        stroke-linecap="butt"
-        stroke-linejoin="miter"
-        stroke-miterlimit="10"
-        stroke-dasharray=""
-        stroke-dashoffset="0"
-        font-family="none"
-        font-weight="none"
-        font-size="none"
-        text-anchor="none"
+        strokeWidth="1"
+        strokeLinecap="butt"
+        strokeLinejoin="miter"
+        strokeMiterlimit="10"
+        strokeDasharray=""
+        strokeDashoffset="0"
+        fontFamily="none"
+        fontWeight="none"
+        fontSize="none"
+        textAnchor="none"
       >
         <g transform="scale(4,4)">
           <path d="M7,29v5l50,1v-7zM7,11v6h50v-6zM7,46v7l50,-1v-5z" />

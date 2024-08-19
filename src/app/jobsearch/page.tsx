@@ -27,7 +27,7 @@ const Page = () => {
         <div
           className={`md:flex ${
             isFilterVisible
-              ? "block  fixed top-2 bg-white overflow-scroll left-0 h-full  p-0 w-64 z-[99] transform transition-transform duration-300"
+              ? "block  fixed top-0 bg-white rounded-xl overflow-scroll left-0 h-full  p-0 w-80 z-[99] transform transition-transform duration-300"
               : "hidden"
           } md:block flex-col min-w-[17.375rem] gap-4 border rounded-md box-border md:px-8 md:py-4 text-slate-800 shadow-active shadow-blue-300 bg-white border-slate-300`}
         >

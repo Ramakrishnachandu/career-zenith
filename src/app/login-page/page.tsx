@@ -17,11 +17,20 @@ const LoginPage = () => {
     email: "",
     password: "",
   });
-
+  
+  const extractFirstTwoLetters = (str: string) => {
+    const matches = str.match(/\b[A-Z]/g);
+    return matches ? matches.slice(0, 2).join('') : '';
+  };
+  
+  const name = "Chandu Veera Ramakrishna";
+  const firstTwoLetters = extractFirstTwoLetters(name);
+  
+  console.log(firstTwoLetters); // Output: "CV"
   const [errors, setErrors] = useState<Errors>({});
   const [error, setError] = useState<string | null>(null);
-  const router = useRouter(); // Initialize the router
-
+  const router = useRouter(); 
+  const [isLoading, setIsLoading] = useState(false)
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
@@ -30,8 +39,9 @@ const LoginPage = () => {
 
   const handleLoginSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
+    setIsLoading(true)
     try {
+
       const response = await fetch("/api/login", {
         method: "POST",
         headers: {
@@ -41,15 +51,14 @@ const LoginPage = () => {
       });
 
       const data = await response.json();
-
+      setIsLoading(false)
       console.log("Data", data);
       if (response.ok) {
         router.push("/");
         setUserInfo(data?.userInfo);
         showToast({
           type: "success",
-          title: `Welcome ${data?.userInfo?.name}..!`,
-          message: "Login Successfully",
+          title: "Login Successfully..!",
         });
       } else {
         // If there's an error, set the error message
@@ -60,6 +69,7 @@ const LoginPage = () => {
         else setError(data.message || "Login failed. Please try again.");
       }
     } catch (error) {
+      setIsLoading(false)
       console.error("Login error:", error);
       setError("An unexpected error occurred. Please try again.");
     }
