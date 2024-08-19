@@ -32,7 +32,9 @@ const Header = () => {
   };
 
   const isActive = (path: string) =>
-    pathName === path ? "text-blue-600" : "text-slate-900 hover:text-blue-500";
+    pathName === path
+      ? "text-blue-600 font-bold"
+      : "text-slate-900 hover:text-blue-500";
 
   const NameLetters = extractNameLetters?.(userInfo?.name);
   return (
@@ -79,22 +81,21 @@ const Header = () => {
                   title={userInfo?.name}
                   className="font-semibold text-base text-white truncate"
                 >
-                  {userInfo?.name || 'No user'}
+                  {userInfo?.name || "No user"}
                 </p>
                 <div className="flex bg-orange-600 border text-base text-white font-semibold rounded-full p-[5px]">
-                  {NameLetters || 'NU'}
+                  {NameLetters || "NU"}
                 </div>
               </div>
               <PrimaryButton
                 onClick={() => {
-                  logout()
+                  logout();
                   router?.push("/");
                 }}
               >
                 {"Log out"}
               </PrimaryButton>
             </>
-
           ) : (
             <>
               <PrimaryButton onClick={() => router?.push("/login-page")}>
@@ -119,16 +120,20 @@ const Header = () => {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-0 left-0 h-full w-64 bg-slate-50 rounded-lg  z-50 transform transition-transform duration-300 ${
-          isSidebarOpen ? "translate-x-0 shadow-blue-300 shadow-lg" : "-translate-x-full"
-        }`}
+        className={`fixed top-0 left-0 h-full w-64 bg-slate-50 rounded-lg  flex flex-col justify-between z-50 transform transition-transform duration-300 ${isSidebarOpen
+            ? "translate-x-0 shadow-blue-300 shadow-lg"
+            : "-translate-x-full"
+          }`}
       >
         <div className="flex justify-start  flex-col gap-4 px-4 py-3">
           <div className="flex gap-2 items-center w-full justify-between">
             <Link href="/">
               <LogoSmall />
             </Link>
-            <button className="" onClick={toggleSidebar}>
+            <button
+              className="flex border border-slate-300 p-1 box-border rounded-md shadow-md shadow-blue-300"
+              onClick={toggleSidebar}
+            >
               <SvgCancel />
             </button>
           </div>
@@ -138,10 +143,10 @@ const Header = () => {
                 title={userInfo?.name}
                 className="font-semibold text-base text-white truncate"
               >
-                {userInfo?.name || 'No User'}
+                {userInfo?.name || "No User"}
               </p>
               <div className="flex bg-orange-600 border text-base text-white font-semibold rounded-full p-[5px]">
-                {NameLetters || 'NU'}
+                {NameLetters || "NU"}
               </div>
             </div>
           )}
@@ -181,7 +186,7 @@ const Header = () => {
               <PrimaryButton
                 onClick={() => {
                   toggleSidebar();
-                  logout()
+                  logout();
                   router?.push("/");
                 }}
               >
@@ -209,6 +214,17 @@ const Header = () => {
               </>
             )}
           </div>
+        </div>
+        <div className="flex p-4 w-full justify-center">
+          <RegisterButton
+          className="flex w-full items-center justify-center"
+            onClick={() => {
+              toggleSidebar();
+              router?.push("/developer-profile");
+            }}
+          >
+            {"Developer - Profile"}
+          </RegisterButton>
         </div>
       </div>
 
