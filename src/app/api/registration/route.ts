@@ -3,7 +3,6 @@ import { NextResponse } from "next/server";
 import dbConnect from "@/lib/db";
 import User from "../../model/user";
 import sendWelcomeEmailToUser from "@/utils/SendWelcomeMail";
-import { use } from "react";
 // import bcrypt from "bcryptjs";
 
 export async function POST(request: Request) {

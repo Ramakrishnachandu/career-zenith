@@ -3,7 +3,23 @@ import React from "react";
 import Image from "next/image";
 
 const DeveloperProfile = () => {
-    
+  const SKILLS = [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "Node.js",
+    "MongoDB",
+    "Github",
+    "Zustand",
+    "Chakra UI",
+    "Tailwind CSS",
+    "Postman",
+    "Jira",
+    "Context API",
+    "Figma",
+    "Power BI",
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-r from-blue-100 to-orange-100 pt-24 py-10 md:pt-10 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto bg-white shadow-card shadow-blue-200 md:shadow-blue-400 rounded-2xl overflow-visible md:overflow-hidden">
@@ -11,13 +27,13 @@ const DeveloperProfile = () => {
           {/* Image for mobile view */}
           <div className="flex justify-center md:hidden md:mt-7 mt-[-4.5rem]">
             <div
-              className="w-36 h-36 rounded-full border border-slate-300 bg-cover bg-center"
+              className="w-36 h-36 rounded-full shadow-2xl shadow-slate-200 border border-slate-300 bg-cover bg-center"
               style={{
                 backgroundImage: "url('/images/rk-image.jpg')",
-                backgroundSize: "cover", // Ensure the image covers the container
-                backgroundPosition: "center", // Center the image
+                backgroundSize: "170% 125%",
+                backgroundPosition: "top center",
               }}
-            ></div>
+            />
           </div>
 
           {/* Image for larger screens */}
@@ -30,15 +46,12 @@ const DeveloperProfile = () => {
             <h1 className="block text-3xl leading-tight font-extrabold text-slate-900">
               {"Chandu Veera Ramakrishna"}
             </h1>
-            {/* <div className="uppercase mt-1  tracking-wide text-sm text-indigo-600 font-bold">
-                            {"Full Stack Developer | Frontend Developer"}
-                        </div> */}
             <h1 className="flex mt-3 items-center justify-start">
               <Image
                 height={300}
-                width={300}
+                width={280}
                 alt={"example"}
-                src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Developer..!;+Frontend+Developer...!;&center=true&size=31"
+                src="https://readme-typing-svg.herokuapp.com/?lines=Full+Stack+Developer.!;+Frontend+Developer..!;&center=true&size=31"
               />
             </h1>
             <p className="mt-2 text-gray-600">
@@ -54,17 +67,7 @@ const DeveloperProfile = () => {
                 {"Technologies & Skills"}
               </h2>
               <ul className="mt-2 flex flex-wrap gap-2">
-                {[
-                  "React",
-                  "Next.js",
-                  "TypeScript",
-                  "JavaScript",
-                  "Tailwind CSS",
-                  "Chakra UI",
-                  "Node.js",
-                  "Zustand",
-                  "MongoDB",
-                ].map((skill, index) => (
+                {SKILLS?.map((skill, index) => (
                   <li
                     key={index}
                     className="bg-indigo-600 text-white px-3 py-1 rounded-full hover:bg-blue-800 text-sm"

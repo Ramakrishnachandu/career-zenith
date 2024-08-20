@@ -1,5 +1,4 @@
 import { sendEmail } from "@/functions/sendEmail";
-import Logo from "@/UIComponents/logo/Logo";
 
 async function sendWelcomeEmailToUser(user: { email: string; name: string }) {
   const subject = "Welcome to Career Zenith!";
