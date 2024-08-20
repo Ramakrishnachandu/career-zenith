@@ -30,8 +30,8 @@ const DeveloperProfile = () => {
               className="w-36 h-36 rounded-full shadow-2xl shadow-slate-200 border border-slate-300 bg-cover bg-center"
               style={{
                 backgroundImage: "url('/images/rk-image.jpg')",
-                backgroundSize: "170% 125%",
-                backgroundPosition: "top center",
+                backgroundSize: "180%",
+                backgroundPosition: "center 20%",
               }}
             />
           </div>
